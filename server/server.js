@@ -19,7 +19,7 @@ app.use(clerkMiddleware())
 
 
 // API Routes
-app.get("/", (_,res) => {
+app.get("/", (req , res) => {
   return res.status(200).json({
     message:"Mongodb Connected Successfully",
     success:true
@@ -33,4 +33,5 @@ app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
   connectDB();
 });
+
 
